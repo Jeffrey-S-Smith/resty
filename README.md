@@ -29,3 +29,5 @@ Students will be creating and styling a Counter application. Look for the follow
 ### Lab Assistance Notes
 
 - The first and most important part of the lab assignment is to draw a process diagram of the starter code and state as events happen. Once the students understand that, they can move on.
+
+![UML](img/Lab26-UML.png)
