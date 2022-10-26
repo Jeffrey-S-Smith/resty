@@ -54,12 +54,14 @@ const Form = (props) => {
   }
 
   const onChange = (e) => {
-    let {name, value} = e.target;
+    e.preventDefault();
+    let {name, value, checked} = e.target;
+    console.log(e.target);
     if (name === 'url') setUrl(value);
-    if (name === 'get' && checked) setMethod(value);
-    if (name === 'post' && checked) setMethod(value);
-    if (name === 'put' && checked) setMethod(value);
-    if (name === 'delete' && checked) setMethod(value);
+    if (name === 'get' && checked) setMethod(name);
+    if (name === 'post' && checked) setMethod(name);
+    if (name === 'put' && checked) setMethod(name);
+    if (name === 'delete' && checked) setMethod(name);
   }
 
   return (
@@ -70,10 +72,10 @@ const Form = (props) => {
           <input name='url' type='text' onChange={onChange}/>
         </label>
         <label className="methods">
-          <input type="radio" name="get" id="get" onChange={onChange}>GET</input>
-          <input type="radio" name="post" id="post" onChange={onChange}>POST</input>
-          <input type="radio" name="put" id="put" onChange={onChange}>PUT</input>
-          <input type="radio" name="delete" id="delete" onChange={onChange}>DELETE</input>
+          <input type="radio" name="get" id="get" onChange={onChange}/>GET
+          <input type="radio" name="post" id="post" onChange={onChange}/>POST
+          <input type="radio" name="put" id="put" onChange={onChange}/>PUT
+          <input type="radio" name="delete" id="delete" onChange={onChange}/>DELETE
         </label>
         <button type="submit">GO!</button>
       </form>
