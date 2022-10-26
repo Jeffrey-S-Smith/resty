@@ -2,6 +2,19 @@
 
 ## Lab Requirements
 
+## Phase 2
+
+In phase 2, we will be receiving user input in preparation of connecting to live APIs, using the useState() hook in our functional components. In order to properly manage state with the useState hook, we will now convert App.js to a functional component.
+
+The following user stories detail the major functionality for this phase of the project.
+
+As a user, I want to enter the REST Method and URL to an API
+As a user, I want to see a summary of my request as well as results returned from an API request in my browser in a readable format
+
+![UML](img/lab27.jpg)
+
+## Phase 1
+
 Students will be creating and styling a Counter application. Look for the following attributes
 
 - `Header`, `Footer`, and `Counter` components to separate files
