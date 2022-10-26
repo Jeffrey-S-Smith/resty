@@ -1,11 +1,12 @@
 import React from 'react';
 import  "./results.scss";
 import "../../app.scss"
+import { prettyPrintJson } from 'pretty-print-json';
 
 const Results = (props) => {
   return (
     <section>
-      <pre>{props.data ? JSON.stringify(props.data, undefined, 2) : null}</pre>
+      <pre id='account' class='json-container'>{props.data ? JSON.stringify(props.data, undefined, 2) : null}</pre>
     </section>
   );
 }
