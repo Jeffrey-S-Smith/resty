@@ -53,24 +53,38 @@ import Footer from './components/footer';
 import Form from './components/form';
 import Results from './components/results';
 
-const [data, setData] = useState(null);
-const [requestParams, setRequestParams] = useState({});
+
 
 const App = () => {
 
-callApi = (requestParams) => {
+  let [data, setData] = useState(null);
+  let [requestParams, setRequestParams] = useState({});
+  
+  const fetchData = (requestParams) => {
+    console.log(requestParams);
+    fetch(requestParams.url)
+                  .then((res) => res.json())
+                  .then((json) => {
+                      setData(json);
+                  })
+          
+  }
 
-  const data = {
-    count: 2,
-    results: [
-      {name: 'fake thing 1', url: 'http://fakethings.com/1'},
-      {name: 'fake thing 2', url: 'http://fakethings.com/2'},
-    ],
-  };
-  setData(data);
-  setRequestParams(requestParams);
-}
+  const callApi = async (requestParams) => {
 
+    const data = {
+      count: 2,
+      results: [
+        { name: 'fake thing 1', url: 'http://fakethings.com/1' },
+        { name: 'fake thing 2', url: 'http://fakethings.com/2' },
+      ],
+    };
+    setData(data);
+    await setRequestParams(requestParams);
+    await fetchData(requestParams);
+  }
+
+  
   return (
     <React.Fragment>
       <Header />
