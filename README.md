@@ -19,8 +19,11 @@ Application fetches data from the URL given, with the method specified
 Displays the response headers and results separately
 Both headers and results should be "pretty printed" JSON
 
+<<<<<<< HEAD
 ![UML](img/phase3UML.jpg)
 
+=======
+>>>>>>> db8b69a0861eb587dbfd73baa32fe1d1add54e1c
 ## Phase 2
 
 In phase 2, we will be receiving user input in preparation of connecting to live APIs, using the useState() hook in our functional components. In order to properly manage state with the useState hook, we will now convert App.js to a functional component.
